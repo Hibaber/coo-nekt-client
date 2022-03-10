@@ -1,0 +1,13 @@
+
+.detailsButtons{
+display:flex;
+justify-content: space-between;
+}
+
+.twoButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:px;
+    width:300px;
+}

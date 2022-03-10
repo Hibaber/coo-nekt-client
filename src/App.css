@@ -1,0 +1,16 @@
+.container{
+    margin: 90px 0;
+}
+
+ a{
+    text-decoration: none;
+}
+
+
+.button{
+
+    background-color: #62bfcf;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid #54b7c9;
+}

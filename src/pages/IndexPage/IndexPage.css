@@ -1,0 +1,30 @@
+
+
+.index-pic{
+
+    width:750px;
+    height:400px;
+    display:flex;
+    justify-content: end;
+    margin-right:70px;
+    margin-top: 50px;
+
+
+}
+
+.index{
+
+    display:flex;
+    justify-content: space-around;
+    
+}
+
+.index p {
+
+    font-size: 22px;
+    margin-left:130px;
+    color:rgb(80, 76, 76);
+    justify-content: center;
+}
+
+
