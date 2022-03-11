@@ -2,6 +2,12 @@
     margin-left:100px;
 }
 
-.right{
-    margin-right:75px;
+.botones{
+    display:flex;
+    justify-content: space-around;
+    margin-top:50px;
+}
+
+.eventsList{
+    margin-bottom:150px;
 }

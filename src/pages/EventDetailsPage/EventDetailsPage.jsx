@@ -74,38 +74,41 @@ function EventDetailsPage() {
                 </Col>
             </Row>
 
-            <Row>
-                <Col md={{ span: 4, offset: 1 }}>
-                    <div className="detailsButtons">
-                        <Link to="/eventos/listado">
-                            <Button className="button" variant="light">Volver</Button>
-                        </Link>
-                        <div className="twoButtons">
-                            {
+            <Row className="detailsButtons">
+                <Col md={4}>
 
-                                user && user._id === eventDetails.owner &&
-                                <>
-                                    <Link to={`/eventos/modificar-evento/${eventDetails._id}`}>
-                                        <Button className="button" variant="light">Editar evento</Button>
-                                    </Link>
-                                    <Button className="button" variant="light" onClick={deleteEvent}>Borrar evento</Button>
-                                </>
-                            }
-
-                            {
-                                user && user._id !== eventDetails.owner &&
-                                <>
-                                    <Button className="button right" variant="light" onClick={assistEvent}>Asistir al evento</Button>
-                                    <Button className="button right" variant="light" onClick={cancelAssistance}>Cancelar asistencia</Button>
-                                </>
-                            }
-                        </div>
-                    </div>
-
+                    <Link to="/eventos/listado">
+                        <Button className="button" variant="light" style={{ width: '100%' }}>Volver</Button>
+                    </Link>
                 </Col>
-            </Row>
+                {
+                    user && user._id === eventDetails.owner &&
+                    <>
+                        <Col md={4}>
+                            <Link to={`/eventos/modificar-evento/${eventDetails._id}`}>
+                                <Button className="button" variant="light" style={{ width: '100%' }}>Editar evento</Button>
+                            </Link>
+                        </Col>
+                        <Col md={4}>
+                            <Button className="button" variant="light" style={{ width: '100%' }} onClick={deleteEvent}>Borrar evento</Button>
+                        </Col>
+                    </>
+                }
 
-        </Container>
+                {
+                    user && user._id !== eventDetails.owner &&
+                    <>
+                        <Col md={4}>
+                            <Button className="button" style={{ width: '100%' }} variant="light" onClick={assistEvent}>Asistir al evento</Button>
+                        </Col>
+                        <Col md={4}>
+                            <Button className="button" style={{ width: '100%' }} variant="light" onClick={cancelAssistance}>Cancelar asistencia</Button>
+                        </Col>
+                    </>
+                }
+            </Row >
+
+        </Container >
     )
 }
 

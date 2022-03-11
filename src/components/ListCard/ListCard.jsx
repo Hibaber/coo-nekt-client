@@ -6,7 +6,7 @@ const ListCard = () => {
 
     return (
 
-        <ul class="cards">
+        <ul class="cards listCard">
             <li>
                 <Link to="/coworking" class="card">
                     <img src={coworking} class="card__image" alt="Eventos" />

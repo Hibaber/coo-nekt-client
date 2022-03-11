@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react'
 import eventsService from '../../services/events.service'
-import { Container, Button, Row } from 'react-bootstrap'
+import { Container, Button, Row, Col } from 'react-bootstrap'
 import EventsList from '../../components/EventsList/EventsList'
 import { AuthContext } from './../../context/auth.context'
 import { Link } from 'react-router-dom'
@@ -28,19 +28,27 @@ const EventsListPage = () => {
 
             <Container className="events">
 
-                <Row>
+                <Row className="eventList">
                     <Link to="/eventos/listado">
                         <EventsList events={events} />
                     </Link>
                 </Row>
-                <div className="botones">
-                    <Link to="/usuario">
-                        <Button className="button " variant="secondary">Volver</Button>
-                    </Link>
-                    <Link to="/eventos/crear-evento">
-                        <Button className="button right" variant="secondary">Crear evento</Button>
-                    </Link>
-                </div>
+                <Row>
+                    <div className="botones">
+                        <Col md={4}>
+
+                            <Link to="/usuario">
+                                <Button className="button" style={{ width: '100%' }} variant="secondary">Volver</Button>
+                            </Link>
+                        </Col>
+                        <Col md={4}>
+                            <Link to="/eventos/crear-evento">
+                                <Button className="button right" variant="secondary" style={{ width: '100%' }}  >Crear evento</Button>
+                            </Link>
+                        </Col>
+                    </div>
+
+                </Row>
 
             </Container>
 

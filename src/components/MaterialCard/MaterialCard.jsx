@@ -8,7 +8,7 @@ const MaterialCard = () => {
         <>
             <ul class="cards">
                 <li>
-                    <Link to="/eventos/listado" class="card">
+                    <Link to="/eventos/listado" class="card material">
                         <img src={networking} class="card__image" alt="Eventos" />
                         <div class="card__overlay">
                             <div class="card__header">
@@ -21,7 +21,7 @@ const MaterialCard = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/material" class="card">
+                    <Link to="/material" class="card material">
                         <img src={material} class="card__image" alt="Eventos" />
                         <div class="card__overlay">
                             <div class="card__header">

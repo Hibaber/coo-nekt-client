@@ -1,11 +1,11 @@
-import { Card, Button } from 'react-bootstrap'
+import { Card, Button, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import "../EventCard/EventCard.css"
 
 const EventCard = ({ name, date, image, _id }) => {
     return (
 
-        <Card className="card" style={{ height: '400px' }}>
+        <Card className="event card" style={{ height: '400px' }}>
             <Card.Img variant="top" src={image} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
@@ -17,7 +17,6 @@ const EventCard = ({ name, date, image, _id }) => {
                 </Link>
             </Card.Body>
         </Card>
-
 
     )
 }
