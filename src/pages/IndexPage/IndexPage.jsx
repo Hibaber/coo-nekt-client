@@ -10,7 +10,7 @@ const IndexPage = () => {
         <Container className="index">
             <Col> <img className="index-pic" src={indexPicture}></img></Col>
             <Col>
-                <h1> <span id="change1">¡Bienvenid@ a CooNekt!  (•◡•)</span></h1>
+                <h1> ¡Bienvenid@ a Connekt!  (•◡•)</h1>
 
                 <p className="welcome">
                     <br />
@@ -19,7 +19,7 @@ const IndexPage = () => {
                     <br />
                     Regístrate y empieza a organizar meetups para intercambiar ideas y tips acerca de los temas que más te apasionen.
                     <br />
-                    ¡No dejes tu proyecto de hoy para mañana! ¡CooNekt now!
+                    ¡No dejes tu proyecto de hoy para mañana! ¡Connekt now!
                 </p>
             </Col>
         </Container>

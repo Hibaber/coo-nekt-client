@@ -3,7 +3,6 @@ import { useContext } from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import { AuthContext } from '../../context/auth.context'
-import logo from "../Navigation/logo.png"
 import Logo from "../Navigation/logo2.png"
 
 const Navigation = () => {
@@ -21,7 +20,7 @@ const Navigation = () => {
                 </img>
             </NavLink>
 
-            <Container className="justify-content-end">
+            <Container className='justify-content-start'>
 
                 {
                     !isLoggedIn ?
@@ -44,8 +43,10 @@ const Navigation = () => {
                 }
             </Container>
         </Navbar >
+
     )
 
 }
 
 export default Navigation
+
