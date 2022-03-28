@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
 import "./CoworkingCard.css"
-
+import { Link } from 'react-router-dom'
+import { Button } from 'react-bootstrap'
 
 
 const CoworkingCard = ({ image, name, description, details }) => {
@@ -34,6 +34,7 @@ const CoworkingCard = ({ image, name, description, details }) => {
                     </div>
                 </div>
             </div>
+
         </>
 
     )

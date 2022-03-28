@@ -11,7 +11,6 @@ const IndexPage = () => {
             <Col> <img className="index-pic" src={indexPicture}></img></Col>
             <Col>
                 <h1> ¡Bienvenid@ a Connekt!  (•◡•)</h1>
-
                 <p className="welcome">
                     <br />
                     <br />

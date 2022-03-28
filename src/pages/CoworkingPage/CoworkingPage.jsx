@@ -7,10 +7,13 @@ const CoworkingPage = () => {
 
     return (
         <>
-            <CoworkingList />
-            <Link to="/usuario">
-                <Button className="button" variant="secondary">Volver</Button>
+
+            <Link to="/material">
+                <Button className=" button materialButton" variant="light" style={{ width: "5%" }}>Volver</Button>
             </Link>
+            <CoworkingList />
+
+
         </>
 
     )

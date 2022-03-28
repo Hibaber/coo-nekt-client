@@ -1,19 +1,12 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import SignupForm from '../../components/SignupForm/SignupForm.jsx'
+import "../SignupPage/SignupPage.css"
 
 
 function SignupPage() {
 
     return (
-        <Container>
-            <Row className="justify-content-md-center">
-                <Col md={4}>
-                    <h1>¡Regístrate! :)</h1>
-                    <hr />
-                    <SignupForm />
-                </Col>
-            </Row>
-        </Container>
+        <SignupForm />
     )
 }
 

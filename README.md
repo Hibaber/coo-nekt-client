@@ -1,70 +1,99 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+App demo: https://coo-nekt.netlify.app/
 
-## Available Scripts
 
-In the project directory, you can run:
+![2022-03-26 18 41 08](https://user-images.githubusercontent.com/86075066/160418573-21c79a26-9230-4fff-bae2-c535a14c39a7.gif)
+![2022-03-26 18 26 06](https://user-images.githubusercontent.com/86075066/160420272-cb74b43c-ede3-474a-a0f3-24370f95e2a5.gif)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Register and create your account or use the following one for testing purposes
+Login
+email: ofek@hotmail.com
+password: 123
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Description
+Connekt(SPA) is an online dating application. The profiles propose ideal romantic dates. Users can "swipe left" to reject a candidate or selects a date and to play to guess a truth and a lie proposed by the profile. In order to talk to that person, the lie must be guess.
 
-### `npm test`
+Server Install
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Server Usage
+npm run dev
 
-### `npm run build`
+Server .env variables needed
+PORT=5005
+ORIGIN=http://localhost:3000
+SESS_SECRET
+MONGODB_URI
+CLOUDINARY_NAME = Your Cloudinary user name
+CLOUDINARY_KEY = Key to your Cloudinary account
+CLOUDINARY_SECRET = Secret key of your Cloudinary account
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+On client:
+REACT_APP_BASE_URL=http://localhost:5005/api
+REACT_APP_SOCKET_URL=http://localhost:3000
+REACT_APP_SOCKET_IO=http://localhost:5005
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Client Install
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Client Usage
+npm start
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Technologies
+React - Hooks
+MongoDB
+Express
+Node
+Javascript (ES6)
+HTML & CSS
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Additional info
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project has been developed by Hiba Berber and Laura Del Valle as the final project of Ironhack's Web Development Bootcamp 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Backend endpoints
 
-## Learn More
+| Method      | Type                                                  | Description
+| :--------   | :-------                                              | :--------------------------------
+|   `GET`     | `/`                                                   |  Homepage
+|   `POST`    | `/api/auth/registro`                                  |  Create a user account
+|   `POST`    | `/api/auth/iniciar-sesion`                            |  Login to account
+|   `POST`    | `/api/auth/verify`                                    |  Verifies if a user is logged in
+|   `POST`    | `/api/auth/logout`                                    |  Log out from the current session
+|   `GET`     | `/api/usuario/eventos/listado`	                      |  Brings all created events by users
+|   `GET`     | `/api/usuario/eventos/detalles/:id`	                  |  Brings event details if clicked on
+|   `POST`    | `/api/usuario/eventos/crear-evento`                   |  Allows to create a new event 
+|   `PUT`     | `/api/usuario/eventos/modificar-evento/:id`           |  Allows to edit a an existing event 
+|   `DELETE`  | `/api/usuario/eventos/borrar-evento/:id`              |  Allows to delete a an existing event 
+|   `PUT`     | `/api/usuario/eventos/detalles/:event_id/asistir`     |  Allows to assist to an event
+|   `PUT`     | `/api/usuario/eventos/detalles/:event_id/desapuntarse`|  Allows to cancel assistance to an event
+|   `GET`     | `/api/usuario/material/listado`	                      |  Brings all the networking material for users
+|   `GET`     | `/api/usuario/material/libros`	                      |  Brings all the books in DB
+|   `GET`     | `/api/usuario/material/coworking`	                  |  Brings all the coworking places in DB
+|   `GET`     | `/api/usuario/getUserById/:id`	                      |  Allows to check other users profile
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Front-end endpoints
 
-### Code Splitting
+| Method      | Type                                                  | Description
+| :--------   | :-------                                              | :--------------------------------
+|   `GET`     | `/`                                                   |  Homepage
+|   `POST`    | `/registro`                                           |  Create a user account
+|   `POST`    | `/iniciar-sesion`                                     |  Login to account
+|   `POST`    | `/verify`                                             |  Verifies if a user is logged in
+|   `POST`    | `/logout`                                             |  Log out from the current session
+|   `GET`     | `/usuario/eventos/listado`	                          |  Brings all created events by users
+|   `GET`     | `/usuario/eventos/detalles/:id`	                      |  Brings event details if clicked on
+|   `POST`    | `/usuario/eventos/crear-evento`                       |  Allows to create a new event 
+|   `PUT`     | `/usuario/eventos/modificar-evento/:id`               |  Allows to edit a an existing event 
+|   `DELETE`  | `/usuario/eventos/borrar-evento/:id`                  |  Allows to delete a an existing event 
+|   `PUT`     | `/usuario/eventos/detalles/:event_id/asistir`         |  Allows to assist to an event
+|   `PUT`     | `/usuario/eventos/detalles/:event_id/desapuntarse`    |  Allows to cancel assistance to an event
+|   `GET`     | `/usuario/material/libros`	                          |  Brings all the books in DB
+|   `GET`     | `/usuario/material/coworking`	                      |  Brings all the coworking places in DB
+|   `GET`     | `/usuario/getUserById/:id`	                          |  Allows to check other users profile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

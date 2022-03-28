@@ -1,13 +1,17 @@
-
-
-.detailsButtons{
+.detailsButtons {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-left:40px;
-    
-    
+    margin-left: 40px;
+    margin-top: 40px;
+
 }
 
+.event {
 
+    margin: 20px auto;
+}
 
+.rowEvent {
+    margin-top: 20px;
+}

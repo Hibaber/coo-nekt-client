@@ -1,8 +1,9 @@
 import { useState } from "react"
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Container, Col, Row } from 'react-bootstrap'
 import authService from "../../services/auth.service"
 import { useNavigate } from 'react-router-dom'
 import uploadService from '../../services/upload.service'
+import "../SignupForm/SignUpForm.css"
 
 
 function SignupForm() {
@@ -62,56 +63,71 @@ function SignupForm() {
 
     return (
 
-        <Form className="signUp" onSubmit={handleSubmit}>
+        <Container className="signUp">
+            <Row >
 
-            <Form.Group className="mb-3">
-                <Form.Label>Usuario</Form.Label>
-                <Form.Control type="text" name="username" value={signupForm.username} onChange={handleInputChange} />
-            </Form.Group>
+                <h1>¡Regístrate! :)</h1>
 
-            <Form.Group >
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" name="email" value={signupForm.email} onChange={handleInputChange} />
-            </Form.Group>
+                <br />
+                <br />
+                <br />
+                <hr />
 
-            <Form.Group>
-                <Form.Label>Contraseña</Form.Label>
-                <Form.Control type="password" name="password" value={signupForm.password} onChange={handleInputChange} />
-            </Form.Group>
+            </Row >
+            <Form onSubmit={handleSubmit}>
 
-            <Form.Group>
-                <Form.Label>Edad</Form.Label>
-                <Form.Control type="number" name="age" value={signupForm.age} onChange={handleInputChange} />
-            </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Usuario</Form.Label>
+                    <Form.Control type="text" name="username" value={signupForm.username} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Form.Group>
-                <Form.Label>Photo</Form.Label>
-                <Form.Control type="file" name="image" onChange={uploadImage} />
-            </Form.Group>
+                <Form.Group >
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" name="email" value={signupForm.email} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Form.Group>
-                <Form.Label>Nivel</Form.Label>
-                <Form.Select name="level" onChange={handleInputChange}>
-                    <option disabled selected>¿Eres amateur o profesional?</option>
-                    <option value='AMATEUR'>Amateur</option>
-                    <option value='PROFESIONAL'>Profesional</option>
-                </Form.Select>
-            </Form.Group>
+                <Form.Group>
+                    <Form.Label>Contraseña</Form.Label>
+                    <Form.Control type="password" name="password" value={signupForm.password} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Form.Group >
-                <Form.Label>LinkedIn</Form.Label>
-                <Form.Control type="text" name="linkedin" value={signupForm.linkedin} onChange={handleInputChange} />
-            </Form.Group>
+                <Form.Group>
+                    <Form.Label>Edad</Form.Label>
+                    <Form.Control type="number" name="age" value={signupForm.age} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Form.Group>
-                <Form.Label>Descripción</Form.Label>
-                <Form.Control type="text" placeholder="Cuenta algo interesante sobre tí..." name="description" value={signupForm.description} onChange={handleInputChange} />
-            </Form.Group>
-            <br />
-            <br />
-            <Button className="button" variant="light" type="submit" style={{ width: '100%' }}>Acceder</Button>
+                <Form.Group>
+                    <Form.Label>Photo</Form.Label>
+                    <Form.Control type="file" name="image" onChange={uploadImage} />
+                </Form.Group>
 
-        </Form>
+                <Form.Group>
+                    <Form.Label>Nivel</Form.Label>
+                    <Form.Select name="level" onChange={handleInputChange}>
+                        <option disabled selected>¿Eres amateur o profesional?</option>
+                        <option value='AMATEUR'>Amateur</option>
+                        <option value='PROFESIONAL'>Profesional</option>
+                    </Form.Select>
+                </Form.Group>
+
+                <Form.Group >
+                    <Form.Label>LinkedIn</Form.Label>
+                    <Form.Control type="text" name="linkedin" value={signupForm.linkedin} onChange={handleInputChange} />
+                </Form.Group>
+
+                <Form.Group>
+                    <Form.Label>Descripción</Form.Label>
+                    <Form.Control type="text" placeholder="Cuenta algo interesante sobre tí..." name="description" value={signupForm.description} onChange={handleInputChange} />
+                </Form.Group>
+                <br />
+                <br />
+                <Button className="button" variant="light" type="submit" style={{ width: '100%' }}>Acceder</Button>
+            </Form>
+        </Container >
+
+
+
+
     )
 }
 

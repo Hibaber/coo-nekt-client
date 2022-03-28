@@ -2,7 +2,11 @@
   height: 60px;
   width: 100%;
   background-color: #62bfcf;
- 
+}
+
+.coonekt {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .navbar span {
@@ -11,6 +15,8 @@
 }
 
 .logo {
+
   width: 110px;
   margin-left: 20px;
+  margin-right: 20px;
 }

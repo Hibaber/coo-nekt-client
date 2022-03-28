@@ -1,9 +1,11 @@
 import { useEffect } from 'react'
 import { useState, useContext } from 'react'
-import { Form, Button, Container } from 'react-bootstrap'
+import { Form, Button, Container, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import { useNavigate, useParams } from 'react-router-dom'
 import eventsService from '../../services/events.service'
 import uploadService from '../../services/upload.service'
+import "../EditEventForm/EditEventForm.css"
 
 const EditEventForm = () => {
 
@@ -77,7 +79,7 @@ const EditEventForm = () => {
     }
 
     return (
-        <Container>
+        <Container className="eventForm">
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="title">
                     <Form.Label>Nombre del evento</Form.Label>
@@ -108,7 +110,12 @@ const EditEventForm = () => {
                     {!loadingImage ? <Button className="button" variant="light" type="submit">Modificar evento</Button> : <button className="button" disabled>Cargando...</button>}
                 </div>
             </Form >
-        </Container>
+            <Col md={4}>
+                <Link to="/eventos/listado">
+                    <Button className="button event" variant="secondary" style={{ width: '50%' }} >Volver</Button>
+                </Link>
+            </Col>
+        </Container >
     )
 }
 

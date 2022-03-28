@@ -14,9 +14,6 @@ const MaterialDetailsPage = () => {
 
             <ListCard />
 
-            <Link to="/">
-                <Button className=" button materialButton" variant="light">Volver</Button>
-            </Link>
         </>
 
     )

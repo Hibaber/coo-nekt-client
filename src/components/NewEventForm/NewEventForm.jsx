@@ -1,9 +1,11 @@
 import { useState, useContext } from 'react'
-import { Form, Button, Container, Row } from 'react-bootstrap'
+import { Form, Button, Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/auth.context'
 import eventsService from '../../services/events.service'
 import uploadService from '../../services/upload.service'
+import "../NewEventForm/NewEventForm.css"
 
 const NewEventForm = () => {
 
@@ -68,7 +70,7 @@ const NewEventForm = () => {
 
     return ( // añadir container y row 
 
-        <Container>
+        <Container className="eventForm">
             <Form className="mb-3" onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="title">
                     <Form.Label>Nombre del meetup</Form.Label>
@@ -98,8 +100,12 @@ const NewEventForm = () => {
                 <div className="d-grid gap-2">
                     {!loadingImage ? <Button className="button" variant="light" type="submit">Crear meetup</Button> : <button disabled>Cargando...</button>}
                 </div>
-
             </Form >
+            <Col md={4}>
+                <Link to="/eventos/listado">
+                    <Button className="button event" variant="secondary" style={{ width: '50%' }} >Volver</Button>
+                </Link>
+            </Col>
         </Container>
 
     )

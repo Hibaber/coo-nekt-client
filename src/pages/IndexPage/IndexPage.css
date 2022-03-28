@@ -1,11 +1,8 @@
 .index-pic {
 
-    width: 750px;
-    height: 400px;
-    display: flex;
-    justify-content: end;
-    margin-right: 70px;
-    margin-top: 50px;
+    width: 780px;
+    height: 450px;
+    margin-top: 70px;
 
 
 }
@@ -13,16 +10,20 @@
 .index {
 
     display: flex;
-    justify-content: space-around;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 150px;
 
 }
 
 .index p {
-
     font-size: 22px;
-    margin-left: 150px;
+    margin-left: 160px;
     color: rgb(80, 76, 76);
-    justify-content: center;
+    text-align: left;
+
+}
+
+h1 {
+    margin-left: 40px;
+
 }

@@ -57,11 +57,12 @@ function EventDetailsPage() {
     }
 
     return (
-        <Container>
+        <Container className="event">
             <h1>Detalles del evento</h1>
             <hr />
+            <br />
 
-            <Row>
+            <Row className="rowEvent">
                 <Col md={{ span: 4, offset: 1 }}>
                     <h3>{eventDetails.name}</h3>
                     <p> <strong>Fecha:</strong>  {eventDetails.date?.slice(0, 10)}</p>

@@ -1,8 +1,9 @@
 import { useState, useContext } from "react"
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Container, Row } from 'react-bootstrap'
 import authService from '../../services/auth.service'
 import { useNavigate, Link } from 'react-router-dom'
 import { AuthContext } from "../../context/auth.context"
+import "../LoginForm/LoginForm.css"
 
 
 function LoginForm() {
@@ -40,22 +41,30 @@ function LoginForm() {
     }
 
     return (
+        <Container className="loginForm">
+            <Row >
 
-        <Form onSubmit={handleSubmit}>
+                <h1>¡Conéctate! :)</h1>
+                <br />
+                <br />
+                <br />
+                <hr />
 
-            <Form.Group className="mb-3">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" name="email" value={loginForm.email} onChange={handleInputChange} />
-            </Form.Group>
+            </Row >
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" name="email" value={loginForm.email} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Contraseña</Form.Label>
-                <Form.Control type="password" name="password" value={loginForm.password} onChange={handleInputChange} />
-            </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Contraseña</Form.Label>
+                    <Form.Control type="password" name="password" value={loginForm.password} onChange={handleInputChange} />
+                </Form.Group>
 
-            <Button className="button" variant="light" type="submit" style={{ width: '100%' }}>Iniciar sesión</Button>
-
-        </Form>
+                <Button className="button" variant="light" type="submit" style={{ width: '100%' }}>Iniciar sesión</Button>
+            </Form>
+        </Container>
     )
 }
 

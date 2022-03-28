@@ -1,13 +1,14 @@
-.events{
-    margin-left:100px;
+.events {
+    margin: 90px auto;
 }
 
-.botones{
-    display:flex;
+.botones {
+    display: flex;
     justify-content: space-around;
-    margin-top:50px;
+    margin-top: 50px;
 }
 
-.eventsList{
-    margin-bottom:150px;
+.eventsList {
+    margin-bottom: 150px;
+    margin-left: 100px;
 }
