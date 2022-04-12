@@ -1,29 +1,22 @@
 .index-pic {
-
-    width: 780px;
-    height: 450px;
-    margin-top: 70px;
-
-
+  width: 780px;
+  height: 450px;
+  margin-top: 70px;
+  display: flex;
 }
 
 .index {
-
-    display: flex;
-    margin: 0 auto;
-    margin-top: 150px;
-
+  display: flex;
+  margin: 0 auto;
 }
 
 .index p {
-    font-size: 22px;
-    margin-left: 160px;
-    color: rgb(80, 76, 76);
-    text-align: left;
-
+  font-size: 22px;
+  margin-left: 160px;
+  color: rgb(80, 76, 76);
+  text-align: left;
 }
 
 h1 {
-    margin-left: 40px;
-
+  margin-left: 40px;
 }
